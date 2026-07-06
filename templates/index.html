@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>House Price Prediction</h1>
+
+<form action="/predict" method="POST">
+
+<input type="number" name="area" placeholder="Area">
+
+<input type="number" name="bedrooms" placeholder="Bedrooms">
+
+<input type="number" name="bathrooms" placeholder="Bathrooms">
+
+<input type="number" name="stories" placeholder="Stories">
+
+<input type="number" name="parking" placeholder="Parking">
+
+<select name="mainroad">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="guestroom">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="basement">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="hotwaterheating">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="airconditioning">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="prefarea">
+<option>yes</option>
+<option>no</option>
+</select>
+
+<select name="furnishingstatus_furnished">
+<option>furnished</option>
+<option>semi-furnished</option>
+<option>unfurnished</option>
+</select>
+
+<br><br>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h2>{{ prediction }}</h2>
+
+</div>
+
+</body>
+</html>
